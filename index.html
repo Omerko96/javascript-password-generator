@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator with JavaScript</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
+
+  <!-- Master Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- Password Generator -->
+  <div class="generator-wrapper">
+    <h3>Password Generator</h3>
+
+    <!-- Generator Form -->
+    <form>
+      <input type="text" id="result" />
+      <button type="button" class="btn-copy">
+        <i class="far fa-copy"></i>
+      </button>
+
+      <span class="success-msg">Copied to Clipboard</span>
+    </form> <!-- End of Generator Form -->
+
+    <!-- Selection Section -->
+    <div class="selection-section">
+      <div class="selection">
+        <label>Password Length</label>
+        <input type="number" id="characterLength" name="characterLength" min="6" max="20" value="20" />
+      </div>
+
+      <div class="selection">
+        <label>Include Lowercase Characters</label>
+        <input type="checkbox" id="lowercaseCharacter" name="lowercaseCharacter" checked />
+      </div>
+
+      <div class="selection">
+        <label>Include Uppercase Characters</label>
+        <input type="checkbox" id="uppercaseCharacter" name="uppercaseCharacter" checked />
+      </div>
+
+      <div class="selection">
+        <label>Include Number Characters</label>
+        <input type="checkbox" id="numberCharacter" name="numberCharacter" checked />
+      </div>
+
+      <div class="selection">
+        <label>Include Symbol Characters</label>
+        <input type="checkbox" id="symbolCharacter" name="symbolCharacter" checked />
+      </div>
+    </div>  <!-- End of Selection Section -->
+
+    <!-- Generate Button -->
+    <button type="button" class="btn-generate">Generate Password</button>
+    <!-- End of Generate Button -->
+  </div>  <!-- End of Password Generator -->
+
+
+  <!-- Generator Script -->
+  <script src="./app.js"></script>
+  
+</body>
+</html>
